@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="d-flex flex-column min-vh-100">
-    <h1 class="pt-5">MEasureMENT</h1>
+    <h1 class="pt-5">計量変換くん</h1>
     <router-view />
     <Footer></Footer>
   </div>
@@ -13,6 +13,9 @@ export default {
   name: "app",
   components: {
     Footer
+  },
+  mounted: function() {
+    document.title = "計量変換くん";
   }
 };
 </script>
