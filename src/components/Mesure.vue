@@ -97,7 +97,7 @@ export default {
       this.target = this.seasonings.filter(function(item, index) {
         if (item.name.indexOf(input) >= 0) return true;
       });
-      this.amount.gram = this.target[0].coefficient * 3 * this.amount.tsp;
+      this.amount.gram = this.target[0].coefficient * this.amount.tsp;
     },
     tbspChange() {
       this.amount.tsp = this.amount.tbsp * 3;
@@ -105,7 +105,7 @@ export default {
     },
     tspChange() {
       this.amount.tbsp = this.amount.tsp / 3;
-      this.amount.gram = this.target[0].coefficient * 3 * this.amount.tsp;
+      this.amount.gram = this.target[0].coefficient * this.amount.tsp;
     },
     gramChange() {
       this.amount.tsp = this.amount.gram / this.target[0].coefficient;
